@@ -7,6 +7,7 @@
 // Read the line as: 'go find the library called react installed in my application as dependency, and assign it to the variable React
 // Webpack will say 'oh the want access to this file, I'll make sure this file has access to React'
 import React, { Component} from 'react';
+//require('../style/style.css');
 import _ from 'lodash';
 // To render React in the DOM, we use React DOM (used to interact with the DOM),
 // not the React library above (used to create and manage our components)

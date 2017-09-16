@@ -1,4 +1,15 @@
 /*Great if className matches the component name so that you have 1 css file per component*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500');*/
+
+/*I want body to display Work Sans as a default font family and 14px as font size;
+ Work Sans is showing up, but font size of 14px isn't due to !important
+ How do I make the font family and font size show up without !important*/
+body {
+    font-family: WorkSans, sans-serif !important;
+    font-size: 14px;
+}
+
 .search-bar{
     margin:20px;
     text-align: center;
@@ -19,6 +30,7 @@
     padding: 1em;
     border:1px solid #ddd;
     border-radius: 4px;
+    letter-spacing: 3px;
 }
 
 .list-group-item {
@@ -30,6 +42,21 @@
 }
 
 @font-face {
-    font-family: Futura;
+    font-family: WorkSans;
+    /*src: url('https://fonts.googleapis.com/css?family=Work+Sans');*/
+    src: url(/src/vendors/trpicfont.woff2);
+}
+
+
+/*Separate the title and description by margin of 20px*/
+.video-details .details title{
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/*Lighter font weight for video description - however, description is not the right reference*/
+/*How should I reference details description?*/
+.video-details .details description{
     font-weight: 400;
 }
