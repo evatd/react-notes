@@ -9,27 +9,27 @@
 // Provide iframe with src which is our url so iframe can show just any video
 // + Some parent elements cannot handle the needs of child elements;React wants to render instantly -> add an check
 
-import React from 'react';
+import React from "react";
 
-const VideoDetail = ({video}) => {
-    // A check to make sure the video has been provided in the props before it tries to render the component (video detail)
-    if (!video) {
-        return <div>Loading...</div>;
-    }
-    const videoId = video.id.videoId;
-    const url =`https://www.youtube.com/embed/${videoId}`;
+const VideoDetail = ({ video }) => {
+  // A check to make sure the video has been provided in the props before it tries to render the component (video detail)
+  if (!video) {
+    return <div>Loading...</div>;
+  }
+  const videoId = video.id.videoId;
+  const url = `https://www.youtube.com/embed/${videoId}`;
 
-    return (
-        <div className="video-detail col-md-8">
-            <div className="embed-responsive embed-responsive-16by9">
-                <iframe className="embed-responsive-item" src={url}></iframe>
-            </div>
-            <div className="details">
-                <div>{video.snippet.title}</div>
-                <div>{video.snippet.description}</div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="video-detail col-md-8">
+      <div className="embed-responsive embed-responsive-16by9">
+        <iframe className="embed-responsive-item" src={url} />
+      </div>
+      <div className="details">
+        <div>{video.snippet.title}</div>
+        <div>{video.snippet.description}</div>
+      </div>
+    </div>
+  );
 };
 
 export default VideoDetail;
